@@ -23,59 +23,87 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="">
+<body>
     <!-- header part started -->
     <header>
         <!-- nav bar part started -->
-        <div class="bg-blue-100">
-            <div class="navbar w-11/12 mx-auto">
-                <div class="navbar-start">
-                    <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M4 6h16M4 12h8m-8 6h16" />
-                            </svg>
+        <section>
+            <div class="bg-blue-100">
+                <div class="navbar w-11/12 mx-auto">
+                    <div class="navbar-start">
+                        <div class="dropdown">
+                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h8m-8 6h16" />
+                                </svg>
+                            </div>
+                            <ul tabindex="-1"
+                                class="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow space-y-2">
+                                <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-question"></i>FAQ</a></li>
+                                <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i>Learn</a></li>
+                                <li><a class="btn btn-soft btn-primary"><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                            </ul>
                         </div>
-                        <ul tabindex="-1"
-                            class="menu menu-sm dropdown-content rounded-box z-1 mt-3 w-52 p-2 shadow space-y-2">
+                        <a class="flex items-center gap-x-1">
+                            <span class="font-bold text-2xl">English</span>
+                            <img src="assets/logo.png" alt="">
+                            <span class="font-medium text-2xl font-bangla">জানালা</span>
+                        </a>
+                    </div>
+                    <div class="navbar-end hidden lg:flex">
+                        <ul class="menu menu-horizontal space-x-4">
                             <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-question"></i>FAQ</a></li>
-                             <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i>Learn</a></li>
-                            <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
+                            <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i>Learn</a></li>
+                            <li><a class="btn btn-soft btn-primary"><i
+                                        class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
                         </ul>
                     </div>
-                    <a class="flex items-center gap-x-1">
-                        <span class="font-bold text-2xl">English</span>
-                        <img src="assets/logo.png" alt="">
-                        <span class="font-medium text-2xl font-bangla">জানালা</span>
-                    </a>
-                </div>
-                <div class="navbar-end hidden lg:flex">
-                    <ul class="menu menu-horizontal space-x-4">
-                        <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-question"></i>FAQ</a></li>
-                        <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-book"></i>Learn</a></li>
-                        <li><a class="btn btn-soft btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a></li>
-                    </ul>
                 </div>
             </div>
-        </div>
+        </section>
         <!-- navbar part end  -->
 
         <!-- banner part started -->
-         <div class="flex w-11/12 mx-auto items-center justify-center">
-            <div class="flex-1 space-y-3">
-                <h1 class="text-2xl font-bold"><span class="text-blue-500">English</span> is Easy!!</h1>
-                <p class="font-medium font-bangla text-base">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-                <input type="text" name="" id="" placeholder="enter your name" class="px-4 py-1 rounded-sm"> <br>
-                <input type="password" name="" id="" placeholder="password" class="px-4 py-1 rounded-sm"> <br>
-                <button class="btn btn-primary">Get Started</button>
+        <section>
+            <div class="flex flex-col-reverse md:flex-row w-11/12 mx-auto items-center justify-center">
+                <div class="flex-1 space-y-3 text-center md:text-left">
+                    <h1 class="text-2xl font-bold"><span class="text-blue-500">English</span> is Easy!!</h1>
+                    <p class="font-medium font-bangla text-base">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি
+                        নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি
+                        Level এ</p>
+                    <input type="text" name="" id="" placeholder="enter your name" class="px-4 py-1 rounded-sm"> <br>
+                    <input type="password" name="" id="" placeholder="password" class="px-4 py-1 rounded-sm"> <br>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+                <div class="flex-1">
+                    <img src="assets/hero-student.png" alt="">
+                </div>
             </div>
-            <div class="flex-1">
-                <img src="assets/hero-student.png" alt="">
-            </div>
-         </div>
+        </section>
     </header>
+    <!-- header part end  -->
+
+    <!-- main part started  -->
+    <main class="w-11/12 mx-auto mt-24">
+        <!-- learn vocabularies section started  -->
+        <section class="space-y-8">
+            <h1 class="text-2xl font-bold text-center"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
+            <!-- lessons  -->
+            <div id="lesson-container" class="flex gap-2 flex-wrap justify-center">
+
+            </div>
+            <div class="text-center font-bangla bg-gray-100 rounded-lg space-y-2 py-12">
+                <p>আপনি এখনো কোন Lesson Select করেননি</p>
+                <h1 class="text-2xl">একটি Lesson Select করুন।</h1>
+            </div>
+        </section>
+
+
+    </main>
+    <script src="script/lessons.js"></script>
 </body>
 
 </html>
