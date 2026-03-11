@@ -5,12 +5,12 @@ const loadLessons = () => {
 }
 
 displayLessons = (data) => {
-    console.log(data);
+    // console.log(data);
     data.forEach(element => {
-        console.log(element);
+        // console.log(element);
         const lessonDiv = document.createElement("div");
         lessonDiv.innerHTML = `
-            <button onclick="loadLessonWords(${element.level_no})" class="btn btn-outline btn-primary"><i class="fa-solid fa-book"></i>Lesson - ${element.level_no}</button>
+            <button id="lesson-btn-${element.level_no}" onclick="loadLessonWords(${element.level_no})" class="btn btn-outline btn-primary lesson-btn"><i class="fa-solid fa-book"></i>Lesson - ${element.level_no}</button>
         `
         document.getElementById("lesson-container").appendChild(lessonDiv);
     });
