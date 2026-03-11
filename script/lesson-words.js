@@ -1,32 +1,24 @@
 const loadLessonWords = (id) => {
-    // console.log(id);
     fetch(`https://openapi.programming-hero.com/api/level/${id}`)
         .then(res => res.json())
         .then(data => {
             removeActive();
+
             const clickBtn = document.getElementById(`lesson-btn-${id}`);
-            // console.log(clickBtn);
             clickBtn.classList.add('active');
-            displayLessonWords(data.data)
+
+            displayLessonWords(data.data);
         })
 }
 
 const removeActive = () => {
     const lessonButtons = document.querySelectorAll(".lesson-btn");
-    console.log(lessonButtons);
-
     lessonButtons.forEach((btn) => {
-        console.log('working');
         btn.classList.remove('active');
-        console.log('yes');
     });
-    console.log(lessonButtons);
+}
 
-};
 const displayLessonWords = (data) => {
-    // console.log(data);
-    // console.log(data.length);
-
     const container = document.getElementById('lesson-word-show-container');
     container.innerHTML = '';
 
@@ -49,7 +41,6 @@ const displayLessonWords = (data) => {
         `
 
         container.append(noWord);
-
         return;
     }
 
@@ -63,20 +54,20 @@ const displayLessonWords = (data) => {
     );
 
     data.forEach(word => {
-        // console.log(word);
         const individualWord = document.createElement('div');
-
         individualWord.innerHTML = `
             <div class='bg-white py-6 px-12 rounded-xl shadow-sm space-y-2 text-center'>
                 <h2 class='font-semibold text-xl'>${word.word ? word.word : 'শব্দটি পাওয়া যায় নি'}</h2>
                 <p class='font-medium'>Meaning /Pronounciation</p>
                 <h2 class='font-semibold text-xl'>${word.meaning ? word.meaning : 'শব্দের অর্থ এখনো সংযুক্ত করা হয়নি'} / ${word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারন এখনো সংযুক্ত করা হয়নি'}</h2>
                 <div class='flex justify-between items-center'>
-                    <button><i class="fa-solid fa-info"></i></button>
-                    <button><i class="fa-solid fa-bullhorn"></i></button>
+                    <button id='word-id-${word.id}' onclick='loadWordDetails(${word.id})' class='p-1 bg-slate-100 rounded'><i class="fa-solid fa-info"></i></button>
+                    <button class='p-1 bg-slate-100 rounded'><i class="fa-solid fa-bullhorn"></i></button>
                 </div>
             </div>
         `
         container.appendChild(individualWord);
     });
 }
+
+// my_modal_5.showModal()
