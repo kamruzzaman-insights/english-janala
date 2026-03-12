@@ -1,4 +1,5 @@
 const loadLessonWords = (id) => {
+    toggleSpinnerTwo(true);
     fetch(`https://openapi.programming-hero.com/api/level/${id}`)
         .then(res => res.json())
         .then(data => {
@@ -8,6 +9,8 @@ const loadLessonWords = (id) => {
             clickBtn.classList.add('active');
 
             displayLessonWords(data.data);
+
+            toggleSpinnerTwo(false);
         })
 }
 
@@ -68,6 +71,8 @@ const displayLessonWords = (data) => {
         `
         container.appendChild(individualWord);
     });
+
+    
 }
 
 // my_modal_5.showModal()

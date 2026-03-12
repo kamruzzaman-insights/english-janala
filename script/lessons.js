@@ -1,7 +1,12 @@
 const loadLessons = () => {
+    toggleSpinnerOne(true);
+
     fetch('https://openapi.programming-hero.com/api/levels/all')
         .then(res => res.json())
-        .then(data => displayLessons(data.data))
+        .then(data => {
+            displayLessons(data.data);
+            toggleSpinnerOne(false);
+        })
 }
 
 displayLessons = (data) => {
