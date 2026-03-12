@@ -65,7 +65,7 @@ const displayLessonWords = (data) => {
                 <h2 class='font-semibold text-xl'>${word.meaning ? word.meaning : 'শব্দের অর্থ এখনো সংযুক্ত করা হয়নি'} / ${word.pronunciation ? word.pronunciation : 'শব্দের উচ্চারন এখনো সংযুক্ত করা হয়নি'}</h2>
                 <div class='flex justify-between items-center'>
                     <button id='word-id-${word.id}' onclick='loadWordDetails(${word.id})' class='p-1 bg-slate-100 rounded'><i class="fa-solid fa-info"></i></button>
-                    <button class='p-1 bg-slate-100 rounded'><i class="fa-solid fa-bullhorn"></i></button>
+                    <button onclick = "pronounceWord('${word.word}')" class='p-1 bg-slate-100 rounded'><i class="fa-solid fa-bullhorn"></i></button>
                 </div>
             </div>
         `
