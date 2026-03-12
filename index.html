@@ -91,30 +91,56 @@
     <main class="w-11/12 mx-auto mt-24">
         <!-- learn vocabularies section started  -->
         <section class="space-y-8">
-            <h1 class="text-2xl font-bold text-center"><span class="text-blue-500">Let's</span> Learn Vocabularies</h1>
+            <section>
+                <h1 class="text-2xl font-bold text-center"><span class="text-blue-500">Let's</span> Learn Vocabularies
+                </h1>
 
-            <!-- toggle spinner for load lessons -->
-            <div id="spinner-one" class="text-center my-6 hidden">
-                <span class="loading loading-spinner loading-md"></span>
-            </div>
-
-            <!-- lessons  -->
-            <div id="lesson-container" class="flex gap-2 flex-wrap justify-center">
-            </div>
-            <!-- show-word-part  -->
-            <div id="spinner-two" class="text-center my-6 hidden">
-                <span class="loading loading-spinner loading-md"></span>
-            </div>
-            <div id="lesson-word-show-container"
-                class="text-center font-bangla bg-gray-100 rounded-lg space-y-2 py-8 px-4 font-bangla">
-
-                <div>
-                    <!-- toggle spinner for load word in level -->
-
-                    <p class="text-small text-gray-600">আপনি এখনো কোন Lesson Select করেননি</p>
-                    <h1 class="text-2xl font-medium">একটি Lesson Select করুন।</h1>
+                <!-- toggle spinner for load lessons -->
+                <div id="spinner-one" class="text-center my-6 hidden">
+                    <span class="loading loading-spinner loading-md"></span>
                 </div>
-            </div>
+
+                <!-- lessons  -->
+                <div id="lesson-container" class="flex gap-2 flex-wrap justify-center">
+                </div>
+            </section>
+
+            <!-- search button implement -->
+            <section class="flex justify-center">
+                <div class="join">
+                    <div>
+                        <label class="input validator join-item">
+                            <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                                    stroke="currentColor">
+                                    <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                </g>
+                            </svg>
+                            <input id="search-word" type="text" placeholder="search vocabularies now" required />
+                        </label>
+                    </div>
+                    <button id="search-btn" class="btn btn-primary join-item">Search</button>
+                </div>
+            </section>
+
+            <!-- show-word-part  -->
+            <section>
+                <div id="spinner-two" class="text-center my-6 hidden">
+                    <span class="loading loading-spinner loading-md"></span>
+                </div>
+
+                <div id="lesson-word-show-container"
+                    class="text-center font-bangla bg-gray-100 rounded-lg space-y-2 py-8 px-4 font-bangla">
+
+                    <div>
+                        <!-- toggle spinner for load word in level -->
+
+                        <p class="text-small text-gray-600">আপনি এখনো কোন Lesson Select করেননি</p>
+                        <h1 class="text-2xl font-medium">একটি Lesson Select করুন।</h1>
+                    </div>
+                </div>
+            </section>
 
             <!-- modal -->
             <!-- Open the modal using ID.showModal() method -->
@@ -139,6 +165,7 @@
     <script src="script/lessons.js"></script>
     <script src="script/lesson-words.js"></script>
     <script src="script/word-details.js"></script>
+    <script src="script/search-vocabularies.js"></script>
 </body>
 
 </html>
